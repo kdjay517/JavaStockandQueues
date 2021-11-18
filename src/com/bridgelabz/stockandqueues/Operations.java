@@ -2,7 +2,7 @@ package com.bridgelabz.stockandqueues;
 
 public class Operations {
 	
-	StockAndQueues sq = new StockAndQueues(3);
+	Stock sq = new Stock(3);
 	public void push() {
 		sq.push(70);
 		sq.push(30);
@@ -11,7 +11,7 @@ public class Operations {
 	}
 	
 	public void pop() {
-		StockAndQueues sq = new StockAndQueues(3);
+		Stock sq = new Stock(3);
 		sq.push(70);
 		sq.push(30);
 		sq.push(56);
@@ -21,13 +21,21 @@ public class Operations {
 	}
 	
 	public void peek() {
-		StockAndQueues sq = new StockAndQueues(2);
+		Stock sq = new Stock(2);
 		sq.push(70);
 		sq.push(30);
 		sq.show();
 		System.out.println("\npeek element is:"+sq.peek());
 		System.out.println("\npoped element is:"+sq.pop());
 		sq.show();
+	}
+	
+	public void enQueueOfQueue() {
+		Queue qe = new Queue(3);
+		qe.enQueue(70);
+		qe.enQueue(30);
+		qe.enQueue(56);
+		qe.show();
 	}
 
 }

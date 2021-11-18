@@ -8,7 +8,7 @@ public class Runner {
 		 Operations operate = new Operations();
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter 1 to push the data into stack\n"+"Enter 2 pop operation \n"+
-										"Enter 3 for peek of stock");
+							"Enter 3 for peek of stock\n"+"Enter 4 for enQueue");
 		switch (scanner.nextInt()) {
 		case 1:
 			operate.push();
@@ -19,7 +19,10 @@ public class Runner {
 		case 3:
 			operate.peek();
 			break;
+		case 4:
+			operate.enQueueOfQueue();
 		}
+		
 		scanner.close();
 	}
 
