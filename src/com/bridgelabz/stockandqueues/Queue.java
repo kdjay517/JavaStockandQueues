@@ -21,9 +21,23 @@ public class Queue {
 			return;
 		}
 		System.out.println("inserting into queue");
-		rear = (rear + 1)%capacity;
+		rear = (rear + 1) % capacity;
 		queue[rear] = data;
 		count++;	
+	}
+	
+	public void deQueue() {
+		if(isEmpty()) {
+			System.out.println("Queue is underflowing");
+			return;
+		}
+		int data = queue[front];
+		front = front + 1;
+		capacity = capacity - 1;
+	}
+
+	public boolean isEmpty() {
+		return size() == 0;
 	}
 
 	private boolean isFull() {
@@ -36,9 +50,16 @@ public class Queue {
 	}
 	
 	public void show() {
-		System.out.println("Elements: ");
+		System.out.print("Elements: ");
 		for (int i:queue) {
-			System.out.print(i);
+			System.out.print(i+" ");
 		}
+	}
+	public void dqshow() {
+		System.out.print("\nElements: ");
+		for (int i = 0; i < capacity;i++) {
+			System.out.print(queue[front + i]+ " ");
+		}
+		
 	}
 }
