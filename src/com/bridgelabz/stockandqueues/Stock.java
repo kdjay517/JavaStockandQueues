@@ -1,10 +1,10 @@
 package com.bridgelabz.stockandqueues;
 
-public class StockAndQueues {
+public class Stock {
 	private int [] stock;
 	private int top;
 	
-	public StockAndQueues(int size) {
+	public Stock(int size) {
 		super();
 		this.stock = new int [size];
 		this.top = -1;
