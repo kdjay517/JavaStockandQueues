@@ -37,5 +37,16 @@ public class Operations {
 		qe.enQueue(56);
 		qe.show();
 	}
+	
+	public void deQueueOfQueue() {
+		Queue qe = new Queue(3);
+		qe.enQueue(70);
+		qe.enQueue(30);
+		qe.enQueue(56);
+		qe.show();
+		qe.deQueue();
+		qe.dqshow();
+		
+	}
 
 }
